@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Restricted destinations</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf = "restrictions.length === 0">
+        <td style="text-align: center;" colspan="3">No Active Travel Restrictions, Happy Travelling!</td>     
+    </tr>    
+    <tr *ngFor="let restriction of restrictions">
+        <td>{{ restriction.name }}</td>
+        <td>{{ restriction.location }}</td>
+        <td>View | Edit | Delete</td>
+    </tr>     
+    </tbody>
+  </table>
+  <button>
+    Add Restriction
+  </button>
